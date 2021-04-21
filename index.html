@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurelia Luszcz, 3048563</title>
+  <link rel="stylesheet" href="styles.css">
+
+<script src="javascript.js">
+</script>
+</head>
+
+<body>
+
+<!--LEFT SIDE-->
+<div class="split left">
+    <div class="centered">
+    <h1 id="main_heading">QUIZ TIME</h1><br>
+      <p style="font-size: 18px;">Here's 10 questions on general knowledge, complete them all by either typing your answer or picking it from a dropdown box or radio buttons! Enjoy :)</p><br>
+      <div id="footer">
+      <p style="font-size: 18px;">Aurelia Luszcz, 3048563</p>
+      </div>
+      </div>
+</div>
+
+<!--RIGHT SIDE-->
+
+<div class="split right">
+ <div class="centered">
+  <div id="wrapper">
+    
+    <!--NAME INPUT-->
+    <div id="form" >
+      <form>
+        <p class="headings">Please type in your name: </p><input type="text" id="t_name"><br>
+        <br>
+        <input type="button" value="Start!" onClick="q1();" class="b1">
+      </form>
+    </div>
+
+
+    <div id="quiz" >
+      
+      <!--FIRST QUESTION-->
+
+    <div id="quiz1" style="display:none;">
+        <h2 class="headings">Question 1/10:</h2> <br>
+      <h3 class="subheadings">
+         What's the best selling book of all time?
+      </h3>
+      <img src="images/book.gif" alt="book" style="height: 200px;">
+      <br>
+      <select>
+      <option value="null" name="g1" id="null1"> <br>
+      <option value="harry" name="g1" id="harry">a. Harry Potter and the Philosopher's Stone<br>
+      <option value="1984" name="g1" id="george">b. 1984<br>
+      <option value="bible" name="g1" id="moses">c. The Bible<br>
+      <option value="paolo" name="g1" id="paolo">d. The Alchemist<br><br>
+      </select>
+      <br><br>
+      <button onClick="q2()" class="b1">
+          Next!
+        </button>
+        <button onClick="hint1()" class="b1">
+            Hint
+        </button>
+        <p id="hint1"></p>
+    </div>
+
+    <!--SECOND QUESTION-->
+
+        <div id="quiz2" style="display:none">
+            <h2 class="headings">Question 2/10:</h2> <br>
+      <h3 class="subheadings">
+         Who is the voice of Shrek?
+      </h3>
+      <img src="images/shrek.png" alt="shrek" style="height: 200px;">
+      <br>
+      <input type="radio" name="g2" id="john">a. John Lithgow<br>
+      <input type="radio" name="g2" id="mike">b. Mike Myers<br>
+      <input type="radio" name="g2" id="shrek">c. I thought Shrek was a person?<br>
+      <input type="radio" name="g2" id="eddie">d. Eddie Murphy<br><br>
+      <button onClick="q3()" class="b1">
+          Next!
+        </button>
+        <button onClick="hint2()" class="b1">
+            Hint
+        </button>
+        <p id="hint2"></p>
+    </div>
+
+    <!--THIRD QUESTION-->
+
+        <div id="quiz3" style="display:none">
+            <h2 class="headings">Question 3/10:</h2> <br>
+      <h3 class="subheadings">
+         What's the capital of Australia?
+      </h3>
+      <img src="images/australia.png" alt="australia" style="height: 200px">
+      <br>
+      <input type="radio" name="g3" id="melbourne">a. Melbourne<br>
+      <input type="radio" name="g3" id="canberra">b. Canberra<br>
+      <input type="radio" name="g3" id="sydney">c. Sydney<br>
+      <input type="radio" name="g3" id="perth">d. Perth<br><br>
+      <button onClick="q4()"  class="b1">
+          Next!
+        </button>
+        <button onClick="hint3()" class="b1">
+            Hint
+        </button>
+        <p id="hint3"></p>
+    </div>
+
+    <!--FOURTH QUESTION-->
+
+        <div id="quiz4" style="display:none">
+            <h2 class="headings">Question 4/10:</h2> <br>
+      <h3 class="subheadings">
+         Who is the richest man in the world?
+      </h3>
+      <img src="images/jeff.jpg" alt="jeff" style="height:200px">
+      <br>
+      <input type="radio" name="g4" id="mark">a. Mark Zuckerberg<br>
+      <input type="radio" name="g4" id="elon">b. Elon Musk<br>
+      <input type="radio" name="g4" id="charityman">c. Bill Gates<br>
+      <input type="radio" name="g4" id="jeff">d. Jeff Bezos<br><br>
+      <button onClick="q5()" class="b1">
+          Next...
+        </button>
+        <button onClick="hint4()" class="b1">
+            Hint
+        </button>
+        <p id="hint4"></p>
+    </div>
+
+    <!--FIFTH QUESTION-->
+
+        <div id="quiz5" style="display:none">
+            <h2 class="headings">Question 5/10:</h2> <br>
+      <h3 class="subheadings">
+        Which country invented gin?
+      </h3>
+      <img src="images/gin.gif" alt="gin" style="width: 40%">
+      <br>
+      <input type="radio" name="g5" id="denmark">a. Denmark<br>
+      <input type="radio" name="g5" id="holland">b. Holland<br>
+      <input type="radio" name="g5" id="japan">c. Japan<br>
+      <input type="radio" name="g5" id="switz">d. Switzerland<br><br>
+      <button onClick="q6()" class="b1">
+          How many more questions are there?!
+        </button>
+        <button onClick="hint5()" class="b1">
+            Hint
+        </button>
+        <p id="hint5"></p>
+    </div>
+
+    <!--SIXTH QUESTION-->
+
+       <div id="quiz6" style="display:none">
+        <h2 class="headings">Question 6/10:</h2> <br>
+      <h3 class="subheadings">
+        Which of the Canary Islands is the largest and most populous?
+      </h3>
+      <img src="images/summer.gif" alt="summer" style="width: 35%">
+      <br>
+      <select>
+      <option value="null" name="g6" id="null"> <br>  
+      <option value="lanzarote" name="g6" id="lanzarote">a. Lanzarote<br>
+      <option value="gran" name="g6" id="gran">b. Gran Canaria<br>
+      <option value="lapalma" name="g6" id="lapalma">c. La Palma<br>
+      <option value="tenerife" name="g6" id="tenerife">d. Tenerife<br><br>
+      </select>
+      <br><br>
+      <button onClick="q7()" class="b1">
+          Getting bored now...
+        </button>
+        <button onClick="hint6()" class="b1">
+            Hint
+        </button>
+        <p id="hint6"></p>
+    </div>
+
+    <!--SEVENTH QUESTION-->
+
+       <div id="quiz7" style="display:none">
+        <h2 class="headings">Question 7/10:</h2> <br>
+      <h3 class="subheadings">
+        What colour is Lightning McQueen in “Cars”?
+      </h3>
+      <img src="images/cars.png" alt="cars" style="width: 50%">
+      <br>
+      <div id="bluecolour">
+      <input type="radio" name="g7" id="blue">a. Blue<br>
+      </div>
+      <div id="redcolour">
+      <input type="radio" name="g7" id="red">b. Red<br>
+      </div>
+      <div id="greencolour">
+      <input type="radio" name="g7" id="green">c. Green<br>
+      </div>
+      <div id="yellowcolour">
+      <input type="radio" name="g7" id="yellow">d. Yellow<br><br>
+      </div>
+      <p>Are you sure you picked the correct answer?</p>
+      <button onClick="q8()" class="b1">
+          yEs, I'm SuRe, NeXt QuEsTiOn!!!!
+        </button>
+        <button onClick="hint7()" class="b1">
+            Hint
+        </button>
+        <p id="hint7"></p>
+    </div>
+
+    <!--EIGTH QUESTION-->
+
+       <div id="quiz8" style="display:none">
+        <h2 class="headings">Question 8/10:</h2> <br>
+      <h3 class="subheadings">
+        The word “ananas” means what, in almost every other major language apart from English?
+      </h3>
+      <img src="images/banana.gif" alt="imheretotrickyou" style="height: 80px"> 
+      <br>
+      <input type="radio" name="g8" id="pineapple">a. Pineapple<br>
+      <input type="radio" name="g8" id="banana">b. Banana<br>
+      <input type="radio" name="g8" id="dog">c. Dog<br>
+      <input type="radio" name="g8" id="pen">d. Pen<br><br>
+      <button onClick="q9()" class="b1">
+          I'm a button!
+        </button>
+        <button onClick="hint8()" class="b1">
+            Hint
+        </button>
+        <p id="hint8"></p>
+    </div>
+
+    <!--NINTH QUESTION-->
+
+       <div id="quiz9" style="display:none">
+        <h2 class="headings">Question 9/10:</h2> <br>
+      <h3 class="subheadings">
+        Who plays Tommy Shelby in Peaky Blinders? Type a, b, c or d.
+      </h3>
+      <img src="images/otter.jpg" alt="peaky" style="height: 200px">
+      <br>
+      <p>a. Cillian Murphy</p>
+      <p>b. Chris Hemsworth</p>
+      <p>c. I wish I did...</p>
+      <p>d. Mads Mikkelsen</p>
+      <input type="textbox" name="g9" id="cillian">
+      <br>
+      <br>
+      <button onClick="q10()" class="b1">
+          Please let it be the last question...
+        </button>
+        <button onClick="hint9()" class="b1">
+            Hint
+        </button>
+        <p id="hint9"></p>
+    </div>
+
+    <!--TENTH QUESTION-->
+
+       <div id="quiz10" style="display:none">
+        <h2 class="headings">Question 10/10:</h2> <br>
+      <h3 class="subheadings">
+        What does IPA stand for?
+      </h3>
+      <img src="images/beer.gif" alt="beer" style="height: 250px">
+      <br>
+      <input type="radio" name="g10" id="impale">I'm Pale Also<br>
+      <input type="radio" name="g10" id="irish">Irish Pale Ale<br>
+      <input type="radio" name="g10" id="india">India Pale Ale<br>
+      <input type="radio" name="g10" id="iceland">Iceland Pale Ale<br><br>
+      <button onClick="done()" class="b1">
+          I'll sure need an IPA after this quiz!
+        </button>
+        <button onClick="hint10()" class="b1">
+            Hint
+        </button>
+        <p id="hint10"></p>
+    </div>
+    
+    <!--QUIZ COMPLETE-->
+       <div id="complete" style="display:none;">
+      <h2 class="headings">
+        You've completed the quiz! Well done! You deserve a pat on the back!
+         </h2>
+         <p class="subheadings">How's your score looking though?</p>
+      <button onClick="result()" class="b1" id="btn">
+          PRESS ME
+        </button>
+    </div>  
+
+    <!--SHOW RESULT-->
+      <div id="result" style="display:none;">
+        <h1 id="score">
+        </h1>
+        <h3 id="score_display">
+        </h3>
+        <h3 id="message"></h3>
+        </h3>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
